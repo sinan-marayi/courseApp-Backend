@@ -6,9 +6,10 @@ const { courseModel } = require("./courseModel");
 
 const app = express();
 
-const url =
+
+const mongourl =
   "mongodb+srv://admin123:database@cluster0.egjrbk0.mongodb.net/courseDb?retryWrites=true&w=majority";
-mongoose.connect(url, { useNewUrlParser: true });
+mongoose.connect(mongourl, { useNewUrlParser: true });
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
